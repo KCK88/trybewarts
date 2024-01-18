@@ -10,3 +10,12 @@ validLogin.addEventListener('click', (event) => {
     alert('Olá, Tryber!');
   } else alert('Email ou senha inválidos.');
 });
+
+const submitCheck = document.getElementById('agreement');
+const submitButton = document.getElementById('submit-btn');
+
+submitCheck.addEventListener('change', () => {
+  if (submitCheck.checked === true) {
+    submitButton.disabled = false;
+  } else { submitButton.disabled = true; }
+});
