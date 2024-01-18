@@ -14,8 +14,4 @@ validLogin.addEventListener('click', (event) => {
 const submitCheck = document.getElementById('agreement');
 const submitButton = document.getElementById('submit-btn');
 
-submitCheck.addEventListener('change', () => {
-  if (submitCheck.checked === true) {
-    submitButton.disabled = false;
-  } else { submitButton.disabled = true; }
-});
+submitCheck.addEventListener('change', () => { submitButton.disabled = !submitCheck.checked; });
